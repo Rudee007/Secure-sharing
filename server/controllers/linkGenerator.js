@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid');
 const bcrypt = require('bcryptjs');
 const Link = require('../models/Link');
-
+const File = require('../models/File'); 
 
 exports.generateLink = async (req,res) =>{
 
@@ -12,7 +12,7 @@ exports.generateLink = async (req,res) =>{
 
         const passwordHash = password ? await bcrypt.hash(password, 10) : null;
 
-        const file = await File.findById(fileId);
+        const file = await File.findOne({ fileId: fileId });
     if (!file) return res.status(404).json({ error: "File not found" });
 
 
@@ -36,8 +36,8 @@ exports.generateLink = async (req,res) =>{
 
     } catch(e){
 
-        console.error("Link generation error: ", err);
-        res.status(500).json({error: "Failed to generate link"});
+        console.error("Link generation error: ",e);
+        res.status(500).json({error: `Failed to generate link ${e}`});
         
     }
 };

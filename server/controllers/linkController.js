@@ -17,6 +17,7 @@ exports.accessLink = async(req, res) =>{
             return res.status(403).json({ error: "Link has expired" });
           }
 
+
         if (link.isOneTime && link.used) {
             return res.status(403).json({ error: "This link has already been used" });
           }
@@ -30,23 +31,33 @@ exports.accessLink = async(req, res) =>{
     const file = await File.findById(link.fileId);
     if (!file) return res.status(404).json({ error: "File not found" });
 
-    const {publicURL, err} = supabase.storage
+
+    console.log('File Supabase Key:', file.supabasePath);
+      
+    console.log(process.env.SUPABASE_BUCKET)
+
+    const {data, error} = supabase.storage
     .from(process.env.SUPABASE_BUCKET)
-    .getPublicUrl(file.supabaseKey)
-    
-     if(err) throw err;
+    .getPublicUrl(file.supabasePath)
 
-
+    if (error) {
+      console.log("Error getting public URL:", error);
+      return res.status(500).json({ error: "Failed to get public URL" });
+    }
 
     if (link.isOneTime){
         link.used = true;
         await link.save()
 
     }
+
+    console.log('File Supabase Key:', file.supabaseKey);
+    console.log('Public URL:', data.publicUrl);
+
     
     res.status(200).json({
         message: "File access granted",
-        url: publicURL,
+        url: data.publicUrl,
         permissions: link.permissions
       });
 
