@@ -62,7 +62,7 @@ exports.deleteFile = async (req, res) => {
 
     const userObjectId = new mongoose.Types.ObjectId(userId);
 
-    const file = await File.findOne({ fileId,   userId: userObjectId// Converts string to ObjectId
+    const file = await File.findOne({ fileId,   userId: userObjectId
     });
 
 
