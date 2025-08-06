@@ -2,13 +2,21 @@ const mongoose = require("mongoose");
 
 const linkSchema = new mongoose.Schema({
   token: { type: String, required: true, unique: true },
-  fileId: { type: mongoose.Schema.Types.ObjectId, ref: "File", required: true },
+  fileId: { type: String, ref: "File", required: true }, // ✅ Fixed: Changed to String
+  userId: { type: mongoose.Schema.Types.ObjectId, ref: "User" },
   passwordHash: { type: String },
-  expiresAt: { type: Date, required: true },
+  expiresAt: { type: Date },
   isOneTime: { type: Boolean, default: false },
   isOneTimeDownload: { type: Boolean, default: false },
   used: { type: Boolean, default: false },
-  permissions: { type: String, enum: ["view", "edit"], default: "view" },
-}, {timestamps: true});
+  permissions: {
+    type: String,
+    enum: ["Full Access", "View Only", "Edit", "Download"],
+    default: "View Only"
+  },
+  isE2EE: { type: Boolean, default: false },
+  iv: { type: String },
+  encryptedSymmetricKey: { type: String },
+}, { timestamps: true });
 
 module.exports = mongoose.model("Link", linkSchema);

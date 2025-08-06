@@ -1,0 +1,151 @@
+/* 
+  Keep this minimal so it doesn't conflict with your layout's .pageContent 
+  background or padding. Just ensure the container is full-width and 
+  that the child can stretch as needed.
+*/
+.uploadContainer {
+  width: 100%;
+}
+
+/* 
+  Make the .uploadWrapper full-width by removing max-width and margin. 
+  Keep the styling you want (background, box-shadow, etc.). 
+*/
+.uploadWrapper {
+  background: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  width: 100%;       /* full width */
+  max-width: none;   /* remove any width constraints */
+  margin: 0;         /* remove auto-centering margin */
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Upload area styles */
+.uploadArea {
+  border: 2px dashed #90caf9;
+  border-radius: 10px;
+  padding: 30px;
+  text-align: center;
+  background: #fff;
+}
+
+.uploadIcon {
+  font-size: 2.5rem;
+  color: #42a5f5;
+  margin-bottom: 10px;
+}
+
+.uploadText {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.selectButton {
+  border-radius: 5px;
+  padding: 8px 20px;
+  font-weight: 500;
+  border-color: #42a5f5;
+  color: #42a5f5;
+  margin-bottom: 10px;
+}
+
+.selectButton:hover {
+  background: #42a5f5;
+  color: #fff;
+}
+
+.fileInput {
+  display: none;
+}
+
+.encryptText {
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* File selected state */
+.fileSelectedArea {
+  text-align: left;
+}
+
+.fileInfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.fileName {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1;
+  word-break: break-all;
+}
+
+.clearButton {
+  font-size: 1.2rem;
+  color: #666;
+  padding: 0;
+  line-height: 1;
+}
+
+.clearButton:hover {
+  color: #000;
+}
+
+.encryptCheckbox {
+  margin-bottom: 20px;
+}
+
+.encryptCheckbox label {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.uploadButton {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  font-weight: 500;
+  background: #42a5f5;
+  border: none;
+}
+
+.uploadButton:hover {
+  background: #1e88e5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .uploadWrapper {
+    padding: 15px;
+  }
+
+  .uploadArea {
+    padding: 20px;
+  }
+
+  .uploadIcon {
+    font-size: 2rem;
+  }
+
+  .uploadText {
+    font-size: 0.9rem;
+  }
+}

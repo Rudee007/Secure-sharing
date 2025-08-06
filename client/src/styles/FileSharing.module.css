@@ -1,0 +1,220 @@
+.container {
+    background-color: #f9fafb;
+    color: #111827;
+    padding: 24px;
+    min-height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #111827;
+  }
+  
+  .subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+  
+  .searchInput {
+    flex: 1;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    padding: 12px 12px 12px 40px;
+    color: #111827;
+    font-size: 14px;
+    margin-right: 16px;
+    position: relative;
+  }
+  
+  .searchInput::placeholder {
+    color: #9ca3af;
+  }
+  
+  .shareButton {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 6px !important;
+    padding: 10px 16px !important;
+    font-size: 14px !important;
+    cursor: pointer !important;
+    font-weight: 500 !important;
+    transition: background-color 0.2s !important;
+  }
+  
+  .shareButton:hover {
+    background-color: #2563eb !important;
+  }
+  
+  .alert {
+    margin-bottom: 20px;
+  }
+  
+  .spinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+  }
+  
+  .noFiles {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 0;
+  }
+  
+  .fileGrid {
+    margin: 0 -12px;
+  }
+  
+  .fileCardCol {
+    padding: 0 12px;
+    margin-bottom: 24px;
+  }
+  
+  .fileCard {
+    background-color: #ffffff !important;
+    border: 1px solid #e5e7eb !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    height: 100% !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  }
+  
+  .fileIcon {
+    background-color: #f3f4f6;
+    color: #1f2937;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+  
+  .fileTitle {
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    margin-bottom: 16px !important;
+    color: #111827 !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .fileMeta {
+    margin-bottom: 16px !important;
+    color: #374151 !important;
+  }
+  
+  .fileMeta > div {
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .metaLabel {
+    color: #6b7280;
+    font-size: 13px;
+  }
+  
+  .metaValue {
+    font-size: 13px;
+    text-align: right;
+    color: #111827;
+  }
+  
+  .buttonGroup {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .actionButton {
+    display: flex !important;
+    align-items: center !important;
+    gap: 6px !important;
+    font-size: 13px !important;
+    flex: 1 !important;
+    justify-content: center !important;
+  }
+  
+  .actionButton:first-child {
+    background-color: #3b82f6 !important;
+    color: #ffffff !important;
+    border: none !important;
+  }
+  
+  .actionButton:first-child:hover {
+    background-color: #2563eb !important;
+  }
+  
+  .actionButton:last-child {
+    background-color: #f3f4f6 !important;
+    color: #111827 !important;
+    border: 1px solid #e5e7eb !important;
+  }
+  
+  .actionButton:last-child:hover {
+    background-color: #e5e7eb !important;
+  }
+  
+  /* Encryption Badge */
+  .metaValue:contains('Encrypted'),
+  .metaValue:contains('Standard') {
+    background-color: #e0f2fe;
+    color: #0369a1;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    display: inline-block;
+  }
+  
+  /* Expiration Warning */
+  .metaValue:contains('Expires') {
+    color: #d97706;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .fileGrid {
+      margin: 0;
+    }
+  
+    .fileCardCol {
+      padding: 0;
+      margin-bottom: 16px;
+    }
+  
+    .searchContainer {
+      flex-direction: column;
+    }
+  
+    .searchInput {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 12px;
+    }
+  
+    .shareButton {
+      width: 100%;
+    }
+  }
+  

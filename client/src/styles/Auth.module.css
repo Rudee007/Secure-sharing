@@ -1,0 +1,212 @@
+/* ../styles/Landing.module.css */
+
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f5f7fa;
+}
+
+.authCard {
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+}
+
+.iconContainer {
+  background-color: #e8f0fe;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 24px;
+}
+
+.iconContainer svg {
+  width: 28px;
+  height: 28px;
+  color: #4285f4;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #202124;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #5f6368;
+  margin-bottom: 32px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #5f6368;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab.active {
+  color: #4285f4;
+  border-bottom: 2px solid #4285f4;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  text-align: left;
+  position: relative;
+}
+
+.label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #202124;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 12px 12px 40px;
+  font-size: 16px;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.input:focus {
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.4);
+  outline: none;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #5f6368;
+}
+
+.forgotPassword {
+  display: block;
+  text-align: right;
+  font-size: 14px;
+  color: #4285f4;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+/* Button Styles */
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 12px;
+  background-color: #4285f4;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: #3367d6;
+}
+
+.btn svg {
+  margin-left: 8px;
+}
+
+/* Footer Styles */
+.footerText {
+  margin-top: 24px;
+  font-size: 14px;
+  color: #5f6368;
+}
+
+.link {
+  color: #4285f4;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Error Handling Styles */
+.errorMessage {
+  color: #dc3545;
+  font-size: 14px;
+  margin-top: 4px;
+  display: block;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Password-specific error message */
+.passwordError {
+  color: #dc3545;
+  font-size: 13px;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* Input error styling */
+.inputError {
+  border: 1px solid #dc3545 !important;
+  background-color: #fff5f5;
+}
+
+.inputError:focus {
+  border-color: #dc3545 !important;
+  box-shadow: 0 0 0 2px rgba(220, 53, 69, 0.4) !important;
+}
+
+/* Error banner for global messages */
+.errorBanner {
+  background-color: #fee2e2;
+  color: #dc2626;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 16px;
+  border: 1px solid #fca5a5;
+  font-size: 14px;
+  text-align: left;
+  font-weight: 500;
+}
+
+/* Ensure input and error messages are properly aligned */
+.formGroup .errorMessage {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 13px;
+}

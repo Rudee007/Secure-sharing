@@ -1,0 +1,200 @@
+/* LinkShared.module.css */
+.fileShareModal {
+    max-width: 550px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050;
+  }
+  
+  .fileShareModal :global(.modal-content) {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .fileShareModal :global(.modal-header) {
+    padding: 1.5rem 1.5rem 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .fileShareModal :global(.modal-title) {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .fileShareModal :global(.modal-body) {
+    padding: 0.75rem 1.5rem 1.5rem;
+  }
+  
+  .closeButton {
+    color: #6c757d;
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    border: none;
+  }
+  
+  .fileInfoContainer {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .fileIcon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pdfIcon {
+    color: #e53935;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .genericFileIcon {
+    background-color: #e0e0e0;
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+  }
+  
+  .fileDetails {
+    flex: 1;
+  }
+  
+  .fileName {
+    font-weight: 500;
+    margin-bottom: 2px;
+    color: #333;
+  }
+  
+  .fileSize {
+    color: #6c757d;
+    font-size: 0.85rem;
+  }
+  
+  .secureLinkSection {
+    margin-top: 1rem;
+  }
+  
+  .sectionLabel {
+    font-weight: 500;
+    color: #495057;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .linkInput {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+    border-color: #dee2e6;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    background-color: #f8f9fa;
+  }
+  
+  .copyButton {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+  }
+  
+  .regenerateLink {
+    font-size: 0.85rem;
+    padding: 0;
+    color: #4066e0;
+    text-decoration: none;
+  }
+  
+  .regenerateLink:hover {
+    text-decoration: underline;
+    color: #2d4ec0;
+  }
+  
+  .securityOptions {
+    margin-top: 1.5rem;
+  }
+  
+  .optionItem {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .optionItem:last-child {
+    border-bottom: none;
+  }
+  
+  .optionIcon {
+    color: #6c757d;
+    font-size: 1.1rem;
+  }
+  
+  .optionSwitch :global(.form-check-input) {
+    width: 2.5rem;
+    height: 1.25rem;
+    cursor: pointer;
+    background-color: #e0e0e0;
+    border: none;
+  }
+  
+  .optionSwitch :global(.form-check-input:checked) {
+    background-color: #4066e0;
+    border-color: #4066e0;
+  }
+  
+  .optionSelect {
+    width: auto;
+    min-width: 120px;
+    font-size: 0.9rem;
+    border-color: #dee2e6;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    padding: 8px 12px;
+  }
+  
+  .fileShareModal :global(.modal-footer) {
+    padding: 1rem 1.5rem 1.5rem;
+    border-top: none;
+    justify-content: space-between;
+  }
+  
+  .fileShareModal :global(.modal-footer .btn-primary) {
+    background-color: #4066e0;
+    border-color: #4066e0;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  .fileShareModal :global(.modal-footer .btn-secondary) {
+    background-color: #f8f9fa;
+    border-color: #dee2e6;
+    color: #495057;
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 500;
+  }
+  
+  /* Additional styles to match the design in the image */
+  :global(.form-control:focus),
+  :global(.form-select:focus) {
+    border-color: #4066e0;
+    box-shadow: 0 0 0 0.25rem rgba(64, 102, 224, 0.25);
+  }
+  
+  :global(.form-check-input:focus) {
+    border-color: #4066e0;
+    box-shadow: 0 0 0 0.25rem rgba(64, 102, 224, 0.25);
+  }

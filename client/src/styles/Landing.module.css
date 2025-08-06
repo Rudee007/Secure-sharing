@@ -1,7 +1,7 @@
 .heroSection {
     background-color: #f8f9fa;
     overflow: hidden;
-    padding-top: 140px; /* 80px original + 60px navbar */
+    padding-top: 140px;
   padding-bottom: 80px;
   
   }
@@ -327,7 +327,6 @@
   line-height: 1.5;
 }
 
-/* Creative Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }

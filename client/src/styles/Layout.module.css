@@ -1,0 +1,43 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  transition: margin-left 0.3s ease;
+}
+
+.pageContent {
+  flex-grow: 1;
+  padding: 80px 20px 20px; /* Adjust padding-top for navbar height */
+  background-color: #f5f6f8; /* Match App.css background */
+}
+
+/* Sidebar handling */
+.sidebarExpanded {
+  margin-left: 250px; /* Sidebar width when expanded */
+}
+
+.sidebarCollapsed {
+  margin-left: 80px; /* Sidebar width when collapsed */
+}
+
+/* When not authenticated (no sidebar) */
+.content:not(.sidebarExpanded):not(.sidebarCollapsed) {
+  margin-left: 0; /* No sidebar, so no margin */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebarExpanded {
+    margin-left: 80px; /* On mobile, sidebar is collapsed by default */
+  }
+
+  .sidebarCollapsed {
+    margin-left: 80px; /* Collapsed state on mobile */
+  }
+}

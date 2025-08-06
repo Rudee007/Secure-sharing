@@ -3,12 +3,12 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { BsArrowRight, BsLock, BsKey, BsClock, BsShield } from 'react-icons/bs';
 import styles from '../styles/Landing.module.css';
 import { FaLock } from 'react-icons/fa';
-
+import { NavLink } from 'react-router-dom';
 const LandingPage = () => {
   const [activeSlide, setActiveSlide] = useState(0);
   
   const carouselItems = [
-    {//note: the iumage is going to be added.
+    {
       id: 1,
       title: "Secure File Sharing",
       description: "End-to-end encryption keeps your files safe",
@@ -38,6 +38,7 @@ const LandingPage = () => {
 
   return (
     <>
+      
       <div className={styles.heroSection}>
         <Container>
           <Row className={styles.heroRow}>
@@ -51,15 +52,15 @@ const LandingPage = () => {
                 one-time downloads, and complete privacy.
               </p>
               <div className={styles.ctaButtons}>
-                <Button className={styles.primaryBtn}>
+                <Button className={styles.primaryBtn} href="/auth">
                   Get Started <BsArrowRight className={styles.btnIcon} />
                 </Button>
-                <Button variant="light" className={styles.secondaryBtn}>
+                <Button variant="light" className={styles.secondaryBtn} as={NavLink} to="/auth?tab=signin">
                   Log In
                 </Button>
               </div>
               <div className={styles.securityFeature}>
-                {/* This div is empty in your code; you can add content here if needed */}
+
               </div>
             </Col>
             
@@ -160,7 +161,7 @@ const LandingPage = () => {
           Your files, your rules—SecureShare makes privacy effortless. Get started today with a free account.
           </p>
           <div className={styles.ctaButtons}>
-            <Button className={styles.primaryBtn}>
+            <Button className={styles.primaryBtn} href="/auth">
               Create Free Account <BsArrowRight className={styles.btnIcon} />
             </Button>
           

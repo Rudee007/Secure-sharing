@@ -1,18 +1,27 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import AuthNavbar from './components/AuthNavbar';
 import LandingPage from './pages/LandingPage';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Layout from './components/Layout';
+import DashboardPage from './pages/DashboardPage';
+import AuthSite from './pages/AuthSite';
+import UploadFile from './pages/UploadPage';
+import AccessFile from './pages/AccessFile';
+import SharedFile from './pages/SharedFile';
 function App() {
   return (
     <BrowserRouter>
-      <AuthNavbar />
       <Routes>
-        <Route path="/" element={<LandingPage />} />
-        {/* Add more routes as needed */}
-        {/* You might want to add these routes later */}
-        {/* <Route path="/flow-diagram" element={<FlowDiagram />} /> */}
-        {/* <Route path="/login" element={<Login />} /> */}
+        <Route path="/auth" element={<AuthSite />} />
+        <Route path="/" element={<Layout />}>
+          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/upload" element={<UploadFile />} />
+          <Route path="/share/:token" element={<AccessFile />} />
+          <Route path="/sharedFile" element={<SharedFile />} />
+
+        </Route>
+        <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Routes>
     </BrowserRouter>
   );

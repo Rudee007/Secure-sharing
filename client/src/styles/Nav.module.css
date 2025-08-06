@@ -30,7 +30,6 @@
   margin-left: auto;
 }
 
-/* Target Bootstrap's classes properly */
 .navLinks :global(.nav-link) {
   font-size: 16px;
   font-weight: 500;

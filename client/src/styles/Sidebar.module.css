@@ -1,0 +1,118 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 210px;
+  height: 100vh;
+  background-color: #fff;
+  border-right: 1px solid #eaedf2;
+  transition: width 0.3s ease;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.collapsed {
+  width: 60px;
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  height: 60px;
+  border-bottom: 1px solid #eaedf2;
+}
+
+.brandText {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+
+.navMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 0;
+  flex-grow: 1;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  color: #6b7280;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.navLink span {
+  margin-left: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.navLink:hover {
+  background-color: #f8fafc;
+  color: #4f46e5;
+  border-left-color: #4f46e5;
+}
+
+.active {
+  color: #4f46e5;
+  background-color: #f1f5f9;
+  border-left-color: #4f46e5;
+}
+
+.navIcon {
+  min-width: 20px;
+  font-size: 16px;
+}
+
+.logoutContainer {
+  padding: 16px;
+  margin-top: auto;
+  border-top: 1px solid #eaedf2;
+}
+
+.logoutButton {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logoutButton span {
+  margin-left: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.logoutButton:hover {
+  color: #ef4444;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 60px;
+  }
+  
+  .sidebar:not(.collapsed) {
+    width: 210px;
+  }
+}
