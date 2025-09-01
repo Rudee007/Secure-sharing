@@ -69,7 +69,7 @@ exports.accessFile = async (req, res) => {
     res.status(200).json(fileInfo);
   } catch (err) {
     console.error('Access error:', err.stack);
-    res.status(500).json({ error: err.message || 'Failed to access file' });
+    res.status(500).json({ error: err.message || 'Failed to access file please try again.' });
   }
 };
 
